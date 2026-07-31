@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Api", "Mithra.Api\Mithra.Api.csproj", "{31FAEFD3-96B1-4A1E-A128-761672826E18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Application", "Mithra.Application\Mithra.Application.csproj", "{DEEC6DAD-C0D1-4826-97B0-67D433C61A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Contracts", "Mithra.Contracts\Mithra.Contracts.csproj", "{054DC677-2F4A-4E4E-96D3-4E6E53713BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Domain", "Mithra.Domain\Mithra.Domain.csproj", "{24C52CAA-D8F6-4869-8375-7070E9DBFE4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Infra", "Mithra.Infra\Mithra.Infra.csproj", "{1250AFFE-39DE-4446-ADE4-97F169EBC46A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Lens", "Mithra.Lens\Mithra.Lens.csproj", "{6BFE140E-1007-4AD5-8995-46C988D77DB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Cortex", "Mithra.Cortex\Mithra.Cortex.csproj", "{3AE2EC55-BC40-430F-956A-5516C4F2ADEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31FAEFD3-96B1-4A1E-A128-761672826E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FAEFD3-96B1-4A1E-A128-761672826E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FAEFD3-96B1-4A1E-A128-761672826E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FAEFD3-96B1-4A1E-A128-761672826E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEEC6DAD-C0D1-4826-97B0-67D433C61A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEC6DAD-C0D1-4826-97B0-67D433C61A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEEC6DAD-C0D1-4826-97B0-67D433C61A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEEC6DAD-C0D1-4826-97B0-67D433C61A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054DC677-2F4A-4E4E-96D3-4E6E53713BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054DC677-2F4A-4E4E-96D3-4E6E53713BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054DC677-2F4A-4E4E-96D3-4E6E53713BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054DC677-2F4A-4E4E-96D3-4E6E53713BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C52CAA-D8F6-4869-8375-7070E9DBFE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C52CAA-D8F6-4869-8375-7070E9DBFE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C52CAA-D8F6-4869-8375-7070E9DBFE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C52CAA-D8F6-4869-8375-7070E9DBFE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1250AFFE-39DE-4446-ADE4-97F169EBC46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1250AFFE-39DE-4446-ADE4-97F169EBC46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1250AFFE-39DE-4446-ADE4-97F169EBC46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1250AFFE-39DE-4446-ADE4-97F169EBC46A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BFE140E-1007-4AD5-8995-46C988D77DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BFE140E-1007-4AD5-8995-46C988D77DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BFE140E-1007-4AD5-8995-46C988D77DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BFE140E-1007-4AD5-8995-46C988D77DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE2EC55-BC40-430F-956A-5516C4F2ADEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE2EC55-BC40-430F-956A-5516C4F2ADEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE2EC55-BC40-430F-956A-5516C4F2ADEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE2EC55-BC40-430F-956A-5516C4F2ADEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
