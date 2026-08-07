@@ -12,7 +12,7 @@ builder.Services.AddMithraDbContext(builder.Configuration);
 builder.Services.AddIdentityDbContext(builder.Configuration);
 builder.Services.AddCookieSetting(builder.Configuration);
 builder.Services.AddJwtAuthentication(builder.Configuration);
-builder.Services.AddCorsPolicies();
+builder.Services.AddCorsPolicies(builder.Configuration);
 
 builder.Logging.ClearProviders().AddConsole();
 

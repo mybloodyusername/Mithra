@@ -18,8 +18,9 @@ public static class ServiceCollectionExtension
     {
         public void AddMithraDbContext(IConfiguration configuration)
         {
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<MithraDbContext>(options =>
-                options.UseNpgsql("Host=localhost;Port=5432;Database=postgres"));
+                options.UseNpgsql(connectionString));
         }
 
         public void AddIdentityDbContext(IConfiguration configuration)
@@ -36,15 +37,19 @@ public static class ServiceCollectionExtension
                 .AddEntityFrameworkStores<MithraDbContext>()
                 .AddDefaultTokenProviders();
         }
-        
+
         public void AddCookieSetting(IConfiguration configuration)
         {
+            var jwtSettings = configuration.GetSection("JwtSettings");
+            var expirationDays = jwtSettings.GetSection("ExpirationDays").Get<int>();
+
             services.ConfigureApplicationCookie(options =>
             {
                 options.Cookie.Name = "Mithra.Identity";
                 options.Cookie.HttpOnly = true;
                 options.Cookie.SameSite = SameSiteMode.Lax;
                 options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+                options.ExpireTimeSpan = TimeSpan.FromDays(expirationDays);
 
                 options.Events = new CookieAuthenticationEvents
                 {
@@ -61,7 +66,7 @@ public static class ServiceCollectionExtension
                 };
             });
         }
-        
+
         public void AddJwtAuthentication(IConfiguration configuration)
         {
             var jwtSettings = configuration.GetSection("JwtSettings");
@@ -75,11 +80,12 @@ public static class ServiceCollectionExtension
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
-                        ValidIssuer = jwtSettings["Issuer"] ?? "MithraAPI",
-                        ValidAudience = jwtSettings["Audience"] ?? "MithraClient",
+                        ValidIssuer = jwtSettings.GetSection("Issuer").Value!,
+                        ValidAudience = jwtSettings.GetSection("Audience").Value!,
                         ClockSkew = TimeSpan.Zero,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["SecretKey"] ??
-                            "YourSuperSecretKeyForJWTTokenGeneration123!"))
+                        IssuerSigningKey =
+                            new SymmetricSecurityKey(
+                                Encoding.UTF8.GetBytes(jwtSettings.GetSection("SecurityKey").Value!))
                     };
                     options.Events = new JwtBearerEvents
                     {
@@ -93,14 +99,17 @@ public static class ServiceCollectionExtension
                     };
                 });
         }
-        
-        public void AddCorsPolicies()
+
+        public void AddCorsPolicies(IConfiguration configuration)
         {
+            
+            var corsSettings = configuration.GetSection("CorsSettings");
+            
             services.AddCors(options =>
             {
                 options.AddPolicy("DevelopmentPolicy", policy =>
                 {
-                    policy.WithOrigins("http://localhost:4200")
+                    policy.WithOrigins(corsSettings.GetSection("DevelopmentOrigin").Value!)
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials();
@@ -108,7 +117,7 @@ public static class ServiceCollectionExtension
 
                 options.AddPolicy("ProductionPolicy", policy =>
                 {
-                    policy.WithOrigins("https://mithra.ir")
+                    policy.WithOrigins(corsSettings.GetSection("ProductionOrigin").Value!)
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials();
