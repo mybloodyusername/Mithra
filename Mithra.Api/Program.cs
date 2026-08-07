@@ -1,3 +1,6 @@
+using Mithra.Api.Controllers;
+using Mithra.Application.Interfaces.Services;
+using Mithra.Application.Services;
 using Mithra.Infra.Extensions;
 using Scalar.AspNetCore;
 
@@ -17,6 +20,11 @@ builder.Services.AddIdentityDbContext(builder.Configuration);
 builder.Services.AddCookieSetting(builder.Configuration);
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddCorsPolicies(builder.Configuration);
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 
 var app = builder.Build();

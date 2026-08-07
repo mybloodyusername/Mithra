@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Domain", "Mithra.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Infra", "Mithra.Infra\Mithra.Infra.csproj", "{1250AFFE-39DE-4446-ADE4-97F169EBC46A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Application", "Mithra.Application\Mithra.Application.csproj", "{8495AADD-2A68-4DEF-97AA-3165D1DD4697}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{1250AFFE-39DE-4446-ADE4-97F169EBC46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1250AFFE-39DE-4446-ADE4-97F169EBC46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1250AFFE-39DE-4446-ADE4-97F169EBC46A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8495AADD-2A68-4DEF-97AA-3165D1DD4697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8495AADD-2A68-4DEF-97AA-3165D1DD4697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8495AADD-2A68-4DEF-97AA-3165D1DD4697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8495AADD-2A68-4DEF-97AA-3165D1DD4697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
