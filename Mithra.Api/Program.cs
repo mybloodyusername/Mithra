@@ -3,6 +3,10 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Logging.ClearProviders().AddConsole();
+
+builder.Services.AddLogging(options => options.SetMinimumLevel(LogLevel.Trace).AddConsole());
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -14,9 +18,10 @@ builder.Services.AddCookieSetting(builder.Configuration);
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddCorsPolicies(builder.Configuration);
 
-builder.Logging.ClearProviders().AddConsole();
 
 var app = builder.Build();
+
+await app.InitializeDatabaseAsync();
 
 if (app.Environment.IsDevelopment())
 {
