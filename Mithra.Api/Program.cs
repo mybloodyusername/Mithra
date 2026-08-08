@@ -44,6 +44,7 @@ else
 
 // Configure the HTTP request pipeline.
 
+app.UseExceptionHandler();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

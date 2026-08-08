@@ -19,7 +19,7 @@ public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IE
         {
             UnauthorizedAccessException or InvalidCredentialException => StatusCodes.Status401Unauthorized,
             NotFoundException => StatusCodes.Status404NotFound,
-            ValidationException => StatusCodes.Status400BadRequest,
+            ValidationException or ConflictException => StatusCodes.Status400BadRequest,
             _ => StatusCodes.Status500InternalServerError
         };
 
