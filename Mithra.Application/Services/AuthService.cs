@@ -1,9 +1,9 @@
 using System.Security.Authentication;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
-using Mithra.Application.DTOs.Auth;
-using Mithra.Application.Interfaces.Services;
+using Mithra.Domain.DTOs.Auth;
 using Mithra.Domain.Entities;
+using Mithra.Domain.Interfaces.Services;
 
 namespace Mithra.Application.Services;
 

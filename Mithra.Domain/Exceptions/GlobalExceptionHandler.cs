@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.Security.Authentication;
 using Microsoft.AspNetCore.Diagnostics;
-using Mithra.Application.Exceptions;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
-namespace Mithra.Api.Controllers;
+namespace Mithra.Domain.Exceptions;
 
 public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
 {

@@ -1,6 +1,6 @@
-using Mithra.Api.Controllers;
-using Mithra.Application.Interfaces.Services;
 using Mithra.Application.Services;
+using Mithra.Domain.Exceptions;
+using Mithra.Domain.Interfaces.Services;
 using Mithra.Infra.Extensions;
 using Scalar.AspNetCore;
 

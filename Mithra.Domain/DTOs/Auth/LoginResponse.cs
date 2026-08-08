@@ -1,4 +1,4 @@
-namespace Mithra.Application.DTOs.Auth;
+namespace Mithra.Domain.DTOs.Auth;
 
 public class LoginResponse
 {

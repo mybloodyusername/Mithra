@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Mithra.Application.DTOs.User;
+namespace Mithra.Domain.DTOs.User;
 
 public class UpdateUserRequest
 {

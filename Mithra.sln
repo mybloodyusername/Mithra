@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Infra", "Mithra.Infr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Application", "Mithra.Application\Mithra.Application.csproj", "{8495AADD-2A68-4DEF-97AA-3165D1DD4697}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Lens", "Mithra.Lens\Mithra.Lens.csproj", "{9E0A8946-0DA3-4939-9FA3-B81D44AB2B0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mithra.Cortex", "Mithra.Cortex\Mithra.Cortex.csproj", "{264E19B9-98E4-437D-B8E4-EE4C9FC1D752}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{8495AADD-2A68-4DEF-97AA-3165D1DD4697}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8495AADD-2A68-4DEF-97AA-3165D1DD4697}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8495AADD-2A68-4DEF-97AA-3165D1DD4697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0A8946-0DA3-4939-9FA3-B81D44AB2B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0A8946-0DA3-4939-9FA3-B81D44AB2B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0A8946-0DA3-4939-9FA3-B81D44AB2B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0A8946-0DA3-4939-9FA3-B81D44AB2B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264E19B9-98E4-437D-B8E4-EE4C9FC1D752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264E19B9-98E4-437D-B8E4-EE4C9FC1D752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264E19B9-98E4-437D-B8E4-EE4C9FC1D752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264E19B9-98E4-437D-B8E4-EE4C9FC1D752}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
