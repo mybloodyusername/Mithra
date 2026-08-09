@@ -1,6 +1,6 @@
 namespace Mithra.Domain.DTOs.Auth;
 
-public class LoginResponse
+public record LoginResponse
 {
     public Guid Id { get; set; }
     public string Email { get; set; }

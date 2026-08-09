@@ -1,5 +1,6 @@
 using Mapster;
 using Microsoft.AspNetCore.Identity;
+using Mithra.Domain.DTOs.Auth;
 using Mithra.Domain.DTOs.User;
 using Mithra.Domain.Entities;
 using Mithra.Domain.Enums;
@@ -49,5 +50,10 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
 
         if (!result.Succeeded) throw new ConflictException("Failed to update user.");
         return existingUser.Adapt<CreateUpdateUserResponse>();
+    }
+
+    public Task<LoginResponse> ChangePassword(LoginRequest request)
+    {
+        throw new NotImplementedException();
     }
 }

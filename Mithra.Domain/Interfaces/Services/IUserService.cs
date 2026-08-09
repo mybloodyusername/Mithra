@@ -8,4 +8,6 @@ public interface IUserService
 {
     public  Task<CreateUpdateUserResponse> Create(CreateUserRequest request, UserRole role);
     public  Task<CreateUpdateUserResponse> Update(UpdateUserRequest request);
+    
+    public  Task<LoginResponse> ChangePassword(LoginRequest request);
 }
